@@ -7,5 +7,4 @@ function  Main() {
 function  Sub() {
     echo  "Sub!"
 }
-
-Main
+Main  "$@"

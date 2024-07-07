@@ -4,5 +4,4 @@ if echo "$0" | grep "/" | grep -E -v "bash-debug|systemd" > /dev/null; then  cd 
 function  Main() {
     ./lib.sh
 }
-
-Main
+Main  "$@"

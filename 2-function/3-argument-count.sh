@@ -1,8 +1,11 @@
 #!/bin/bash
 
+function  Main() {
+    ChkConfig  "first"  second  3
+}
+
 function  ChkConfig() {
     echo  $#
     echo  "$#"
 }
-
-ChkConfig  "first"  second  3
+Main  "$@"

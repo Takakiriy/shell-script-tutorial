@@ -6,5 +6,4 @@ source  "function.sh"
 function  Main() {
     Sub
 }
-
-Main
+Main  "$@"

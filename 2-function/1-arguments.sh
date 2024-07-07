@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function  Main() {
+    ChkConfig  "first"  second  3
+    ChkConfig  "first"  ""  3
+}
+
 function  ChkConfig() {
     local  first="$1"
     local  sub="$2"  #// ここに引数の補足説明を書く
@@ -11,6 +16,4 @@ function  ChkConfig() {
         echo  "${number}: ${first}-${sub}"
     fi
 }
-
-ChkConfig  "first"  second  3
-ChkConfig  "first"  ""  3
+Main  "$@"

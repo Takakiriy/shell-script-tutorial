@@ -1,0 +1,6 @@
+## 基本 if のみ ----------------------------
+value is abc.
+## if と elif (else if) と else ----------------------------
+value is abc.
+value is def.
+else

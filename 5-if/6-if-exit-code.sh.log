@@ -1,0 +1,16 @@
+## true and false command ----------------------------
+0
+1
+OK
+OK
+## exit code 0 is true ----------------------------
+"abc" is matched with abc.
+"def" is not matched with abc.
+## exit code 0 is false ----------------------------
+"abc" is not matched with abc.
+"def" is matched with abc.
+## test command ----------------------------
+abc is abc.
+def is not abc.
+## Do nothing ----------------------------
+Exit code is not 0.

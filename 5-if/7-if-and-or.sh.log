@@ -1,0 +1,37 @@
+## true false && || ----------------------------
+true &&
+false ||
+## stderr ----------------------------
+./7-if-and-or.sh: line 13: cd: unknown_path: No such file or directory
+ERROR
+## Error function ----------------------------
+./7-if-and-or.sh: line 21: cd: unknown_path: No such file or directory
+ERROR
+exit  "2"
+## if && || ----------------------------
+abc def: && true
+abc def: || true
+abc 456: && false
+abc 456: || true
+123 def: && false
+123 def: || true
+123 456: && false
+123 456: || false
+## if -a -o ----------------------------
+abc def: && true
+abc def: || true
+abc 456: && false
+abc 456: || true
+123 def: && false
+123 def: || true
+123 456: && false
+123 456: || false
+## if [[ && || ]] ----------------------------
+abc def: && true
+abc def: || true
+abc 456: && false
+abc 456: || true
+123 def: && false
+123 def: || true
+123 456: && false
+123 456: || false

@@ -1,0 +1,22 @@
+## undefined value is empty string ----------------------------
+undefined!
+## undef number ----------------------------
+undefVariable1 is 0.
+./8-if-undefined.sh: line 23: ((: == 0 : syntax error: operand expected (error token is "== 0 ")
+undefVariable2 is not 0.
+./8-if-undefined.sh: line 29: ((: == 0 : syntax error: operand expected (error token is "== 0 ")
+"undefVariable3" is not 0.
+## set -u undefined variable ----------------------------
+./8-if-undefined.sh: line 41: unsetVariable: unbound variable
+## default argument error ----------------------------
+./8-if-undefined.sh: line 47: $1: unbound variable
+## default argument ----------------------------
+(abc)
+()
+(abc)
+(def)
+## array ----------------------------
+./8-if-undefined.sh: line 70: Array1[10]: unbound variable
+## associative array ----------------------------
+BASH_VERSION: 5.1.16(1)-release
+./8-if-undefined.sh: line 80: Dictionary1["Unknown"]: unbound variable

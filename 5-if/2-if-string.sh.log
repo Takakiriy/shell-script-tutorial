@@ -1,0 +1,19 @@
+## ==, != ----------------------------
+abc is abc.
+def is not abc.
+## = ----------------------------
+abc is abc.
+def is not abc.
+## <, > ----------------------------
+abb is less than abc.
+abc is abc.
+abcc is greater than abc.
+## >=, <=, -eq, -ne ----------------------------
+./2-if-string.sh: line 53: [: a: integer expression expected
+false
+./2-if-string.sh: line 53: [: abc: integer expression expected
+false
+## =~ ---------------------------------===
+abc is not matched with "a.c".
+ABC is not matched with "a.c".
+end

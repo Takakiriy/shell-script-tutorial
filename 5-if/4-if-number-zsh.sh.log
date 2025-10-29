@@ -1,0 +1,102 @@
+BASH_VERSION: 
+ZSH_VERSION: 5.9
+## ==, != ----------------------------
+10 is 10.
+ 11 is 11.
+12 is 12.
+13 is not 10.
+"" is not defined but 0.
+./4-if-number-zsh.sh:27: bad math expression: operand expected at `"" == 0 '
+"" is not available.
+## -eq, -ne ----------------------------
+10 is 10.
+ 11 is 11.
+12 is not 10.
+./4-if-number-zsh.sh:48: bad math expression: operator expected at `5 '
+./4-if-number-zsh.sh:51: bad math expression: operator expected at `0 '
+## = ----------------------------
+IfIntegerSingleEqual:3: bad math expression: lvalue required
+5 is 5.
+IfIntegerSingleEqual:3: bad math expression: lvalue required
+5 is 5.
+## <, >, >=, <= ----------------------------
+2 is less than 3.
+3 is less equal 3.
+7 is greater equal 7.
+10 is greater than 7.
+6 is greater than 5.
+5 is in else
+abc is less than 5.
+IfIntegerLessGrater:4: bad math expression: operand expected at `"" < 3 '
+IfIntegerLessGrater:6: bad math expression: operand expected at `"" <= 3 '
+IfIntegerLessGrater:8: bad math expression: operand expected at `"" < "5" '
+IfIntegerLessGrater:10: bad math expression: operand expected at `"" > 7 '
+IfIntegerLessGrater:12: bad math expression: operand expected at `"" >= 7 '
+ is in else
+## -lt, -gt, -le, -lt ----------------------------
+IfIntegerLessGraterO:4: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:6: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:8: bad math expression: operator expected at `"5" '
+IfIntegerLessGraterO:10: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:12: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:14: bad math expression: operator expected at `"5" '
+2 is in else
+IfIntegerLessGraterO:4: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:6: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:8: bad math expression: operator expected at `"5" '
+IfIntegerLessGraterO:10: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:12: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:14: bad math expression: operator expected at `"5" '
+3 is in else
+IfIntegerLessGraterO:4: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:6: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:8: bad math expression: operator expected at `"5" '
+IfIntegerLessGraterO:10: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:12: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:14: bad math expression: operator expected at `"5" '
+7 is in else
+IfIntegerLessGraterO:4: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:6: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:8: bad math expression: operator expected at `"5" '
+IfIntegerLessGraterO:10: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:12: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:14: bad math expression: operator expected at `"5" '
+8 is in else
+IfIntegerLessGraterO:4: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:6: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:8: bad math expression: operator expected at `"5" '
+IfIntegerLessGraterO:10: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:12: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:14: bad math expression: operator expected at `"5" '
+6 is in else
+IfIntegerLessGraterO:4: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:6: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:8: bad math expression: operator expected at `"5" '
+IfIntegerLessGraterO:10: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:12: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:14: bad math expression: operator expected at `"5" '
+5 is in else
+IfIntegerLessGraterO:4: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:6: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:8: bad math expression: operator expected at `"5" '
+IfIntegerLessGraterO:10: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:12: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:14: bad math expression: operator expected at `"5" '
+abc is in else
+IfIntegerLessGraterO:4: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:6: bad math expression: operator expected at `3 '
+IfIntegerLessGraterO:8: bad math expression: operator expected at `"5" '
+IfIntegerLessGraterO:10: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:12: bad math expression: operator expected at `7 '
+IfIntegerLessGraterO:14: bad math expression: operator expected at `"5" '
+ is in else
+## calcurate and compare ----------------------------
+2 + 2 == 4
+3 + 2 == 5
+4 - 4 == 0
+5 * 2  == 10
+6 / 3  == 2
+10 / 3  == 3 (not 3.333...)
+14 / 4.0 == 3.5
+1 + 1 * 2 == 3
+( -1 + 1 ) * 2 == 0

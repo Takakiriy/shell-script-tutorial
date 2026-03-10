@@ -1,0 +1,11 @@
+function  echo_q() {
+    local  output="'./echo-q'"
+    local  parameter=""
+
+    for parameter in "$@"; do
+        output="${output}  '${parameter}'"
+    done
+    echo  "${output}"
+}
+
+echo_q  "$@"
